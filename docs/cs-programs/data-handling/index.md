@@ -4,7 +4,8 @@ All school related resources stored here.
 
 ### RESOURCES
 
-- [CS PROGRAMS](./cs-programs)
+- [TEXT FILES](./text-files)
+- [BINARY FILES](./binary-files)
 
 
 ### Other

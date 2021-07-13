@@ -4,7 +4,8 @@ All school related resources stored here.
 
 ### RESOURCES
 
-- [CS PROGRAMS](./cs-programs)
+- [DATA HANDLING](./data-handling)
+- [MYSQL CONNECTIVITY](./mysql-connectivity)
 
 
 ### Other

@@ -4,7 +4,6 @@ All school related resources stored here.
 
 ### RESOURCES
 
-- [CS PROGRAMS](./cs-programs)
 
 
 ### Other
