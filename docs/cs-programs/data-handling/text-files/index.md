@@ -1,8 +1,9 @@
 # SCHOOL RESOURCES ARCHIVE
 
 All school related resources stored here.
+#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
 
-### RESOURCES
+### RESOURCE LIST
 
 ##  1)WAP to create a text file of story.txt with one line at a time. Display the file.
 ```python
@@ -213,5 +214,5 @@ count_e()
 ```
 
 
-### Other
+### ENCOUNTERED SOMETHING WRONG?
 Raise an issue on [github](https://github.com/sujaldev/school) to report anything.

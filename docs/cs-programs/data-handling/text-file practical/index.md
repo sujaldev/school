@@ -1,8 +1,9 @@
 # SCHOOL RESOURCES ARCHIVE
 
 All school related resources stored here.
+#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
 
-### RESOURCES
+### RESOURCE LIST
 
 ## <br>Q1.WA menu driven program to do the following :<br>(a)	Display the file story.txt<br>(b)	Count and display all those words which starts with alphabet a/A<br>
 ```python
@@ -31,8 +32,23 @@ def count():
     print("COUNT:", w_count)
 
 
-display()
-count()
+def menu():
+    while True:
+        print("1: DISPLAY FILE",
+              "2: COUNT WORDS STARTING WITH 'A'",
+              "3: EXIT", sep="\n")
+        choice = input("Enter choice: ")
+        if choice == "1":
+            display()
+        elif choice == "2":
+            count()
+        elif choice == "3":
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN")
+
+
+menu()
 
 ```
 ## <br>Q2. WA menu driven program to do the following :<br>(a)	Display the file story.txt<br>(b)	Count and display all the lines which ends with alphabet a/A<br>
@@ -62,8 +78,23 @@ def count():
     print("COUNT:", w_count)
 
 
-display()
-count()
+def menu():
+    while True:
+        print("1: DISPLAY FILE",
+              "2: COUNT LINES ENDING WITH 'A'",
+              "3: EXIT", sep="\n")
+        choice = input("Enter choice: ")
+        if choice == "1":
+            display()
+        elif choice == "2":
+            count()
+        elif choice == "3":
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN")
+
+
+menu()
 
 ```
 ## <br>Q3. WA menu driven program to do the following :<br>(a)	Add more lines(one at a time) in an existing file story.txt<br>(b)	Display the content of the file using readline()<br>
@@ -96,11 +127,26 @@ def display_by_line():
     print("\nFILE END")
 
 
-append_lines()
-display_by_line()
+def menu():
+    while True:
+        print("1: APPEND LINES TO EXISTING FILE",
+              "2: DISPLAY FILE USING READLINE",
+              "3: EXIT", sep="\n")
+        choice = input("Enter choice: ")
+        if choice == "1":
+            append_lines()
+        elif choice == "2":
+            display_by_line()
+        elif choice == "3":
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN")
+
+
+menu()
 
 ```
 
 
-### Other
+### ENCOUNTERED SOMETHING WRONG?
 Raise an issue on [github](https://github.com/sujaldev/school) to report anything.

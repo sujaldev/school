@@ -1,8 +1,9 @@
 # SCHOOL RESOURCES ARCHIVE
 
 All school related resources stored here.
+#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
 
-### RESOURCES
+### RESOURCE LIST
 
 ## <br>Q1) WAP to retrieve and display all the employees working in a given department<br>entered by the user at run from an existing table employee in a database sample<br>
 ```python
@@ -329,5 +330,5 @@ Continue deleting? (y/n): n
 ```
 
 
-### Other
+### ENCOUNTERED SOMETHING WRONG?
 Raise an issue on [github](https://github.com/sujaldev/school) to report anything.

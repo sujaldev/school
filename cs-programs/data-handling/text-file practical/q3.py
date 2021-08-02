@@ -26,5 +26,20 @@ def display_by_line():
     print("\nFILE END")
 
 
-append_lines()
-display_by_line()
+def menu():
+    while True:
+        print("1: APPEND LINES TO EXISTING FILE",
+              "2: DISPLAY FILE USING READLINE",
+              "3: EXIT", sep="\n")
+        choice = input("Enter choice: ")
+        if choice == "1":
+            append_lines()
+        elif choice == "2":
+            display_by_line()
+        elif choice == "3":
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN")
+
+
+menu()

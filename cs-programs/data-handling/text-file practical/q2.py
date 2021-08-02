@@ -23,5 +23,20 @@ def count():
     print("COUNT:", w_count)
 
 
-display()
-count()
+def menu():
+    while True:
+        print("1: DISPLAY FILE",
+              "2: COUNT LINES ENDING WITH 'A'",
+              "3: EXIT", sep="\n")
+        choice = input("Enter choice: ")
+        if choice == "1":
+            display()
+        elif choice == "2":
+            count()
+        elif choice == "3":
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN")
+
+
+menu()
