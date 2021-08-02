@@ -6,6 +6,7 @@ All school related resources stored here.
 
 - [TEXT FILES](./text-files)
 - [BINARY FILES](./binary-files)
+- [TEXT FILE PRACTICAL](./text-file practical)
 
 
 ### Other
