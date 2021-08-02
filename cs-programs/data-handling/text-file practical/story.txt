@@ -3,3 +3,4 @@ mixed with non a words
 apple banana aeroplane astronomy physics
 mathematics astrophysics cat animal
 appended line from question 3
+this is a line that ends with a beluga

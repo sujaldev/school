@@ -51,13 +51,13 @@ def display():
 
 
 def count():
+    print("LINES ENDING WITH A")
     file = open("story.txt")
-    data = file.read().replace("\n", " ").split(" ")
-    print("WORDS ENDING WITH A")
+    lines = file.readlines()
     w_count = 0
-    for word in data:
-        if word[-1].lower() in "aA":
-            print(word)
+    for line in lines:
+        if line[-1].lower() in "aA":
+            print(line)
             w_count += 1
     print("COUNT:", w_count)
 
