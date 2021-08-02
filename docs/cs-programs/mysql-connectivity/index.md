@@ -4,10 +4,7 @@ All school related resources stored here.
 
 ### RESOURCES
 
-## 
-Q1) WAP to retrieve and display all the employees working in a given department
-entered by the user at run from an existing table employee in a database sample
-
+## <br>Q1) WAP to retrieve and display all the employees working in a given department<br>entered by the user at run from an existing table employee in a database sample<br>
 ```python
 """
 Q1) WAP to retrieve and display all the employees working in a given department
@@ -40,10 +37,7 @@ No record found
 """
 
 ```
-## 
-Q2) WAP to create a table game (game no, name , nop) and insert rows in it
-using  user defined functions create_table() and insert_rows()
-
+## <br>Q2) WAP to create a table game (game no, name , nop) and insert rows in it<br>using  user defined functions create_table() and insert_rows()<br>
 ```python
 """
 Q2) WAP to create a table game (game no, name , nop) and insert rows in it
@@ -107,13 +101,7 @@ Continue (y/n): n
 
 """
 ```
-## 
-WAP TO INTERFACE BETWEEN PYTHON AND MYSQL TO DO THE FOLLOWING
-
-1) TO CREATE A TABLE GAME IN MYSQL
-2) ADD RECORDS IN BY TAKING VALUES AT RUNTIME FROM USER
-3) TO DISPLAY ALL STUDENTS WHO HAVE GOT A PARTICULAR GRADE WHICH IS INPUT BY THE USER
-
+## <br>WAP TO INTERFACE BETWEEN PYTHON AND MYSQL TO DO THE FOLLOWING<br><br>1) TO CREATE A TABLE GAME IN MYSQL<br>2) ADD RECORDS IN BY TAKING VALUES AT RUNTIME FROM USER<br>3) TO DISPLAY ALL STUDENTS WHO HAVE GOT A PARTICULAR GRADE WHICH IS INPUT BY THE USER<br>
 ```python
 """
 WAP TO INTERFACE BETWEEN PYTHON AND MYSQL TO DO THE FOLLOWING
@@ -198,13 +186,7 @@ Continue searching? (y/n): n
 """
 
 ```
-## 
-Q4) WAP TO:
-A) CREATE THE GIVEN TABLE ORDERS
-B) ADD VALUES TO THE TABLE WITH VALUES FROM USER TAKEN AT RUNTIME
-C) DELETE A RECORD FROM TABLE FOR A GIVEN ORDER NUMBER
-D) DISPLAY ALL RECORDS
-
+## <br>Q4) WAP TO:<br>A) CREATE THE GIVEN TABLE ORDERS<br>B) ADD VALUES TO THE TABLE WITH VALUES FROM USER TAKEN AT RUNTIME<br>C) DELETE A RECORD FROM TABLE FOR A GIVEN ORDER NUMBER<br>D) DISPLAY ALL RECORDS<br>
 ```python
 """
 Q4) WAP TO:

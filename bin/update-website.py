@@ -5,7 +5,7 @@ import json
 def python_to_markdown(code):
     question = None
     if code.startswith('"""'):
-        question = code.split('"""')[1]
+        question = code.split('"""')[1].replace("\n", "<br>")
     elif code.startswith("#"):
         question = ""
         for line in code.split("\n"):
@@ -83,7 +83,8 @@ updater = Updater(
         ".idea",
         ".git",
         "docs",
-        "bin"
+        "bin",
+        "test"
     ),
     (
         ".gitignore",

@@ -4,11 +4,7 @@ All school related resources stored here.
 
 ### RESOURCES
 
-## 
-Q1.WA menu driven program to do the following :
-(a)	Display the file story.txt
-(b)	Count and display all those words which starts with alphabet a/A
-
+## <br>Q1.WA menu driven program to do the following :<br>(a)	Display the file story.txt<br>(b)	Count and display all those words which starts with alphabet a/A<br>
 ```python
 """
 Q1.WA menu driven program to do the following :
@@ -39,11 +35,7 @@ display()
 count()
 
 ```
-## 
-Q2. WA menu driven program to do the following :
-(a)	Display the file story.txt
-(b)	Count and display all the lines which ends with alphabet a/A
-
+## <br>Q2. WA menu driven program to do the following :<br>(a)	Display the file story.txt<br>(b)	Count and display all the lines which ends with alphabet a/A<br>
 ```python
 """
 Q2. WA menu driven program to do the following :
