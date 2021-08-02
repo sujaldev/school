@@ -1,12 +1,3 @@
-# SCHOOL RESOURCES ARCHIVE
-
-All school related resources stored here.
-#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
-
-### RESOURCE LIST
-
-## <br>Q18) WAP to menu driven program to do the following:-<br>a) Create a binary file 'item.dat' consisting of<br>    item_id, item_name, price, quantity in the following format:<br>    [[121,pen,20,5],[21,pencil,10,10],.....]<br>b) Display the above file<br>c) Add more item details in the existing file<br>d) Display the details of an item for a given item_id<br>
-```python
 """
 Q18) WAP to menu driven program to do the following:-
 a) Create a binary file 'item.dat' consisting of
@@ -114,9 +105,3 @@ def menu():
 
 
 menu()
-
-```
-
-
-### ENCOUNTERED SOMETHING WRONG?
-Raise an issue on [github](https://github.com/sujaldev/school) to report anything.
