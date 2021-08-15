@@ -5,6 +5,39 @@ All school related resources stored here.
 
 ### RESOURCE LIST
 
+## <br>Q1) WAP to retrieve and display all the employees working in a given department<br>entered by the user at run from an existing table employee in a database sample<br>
+```python
+"""
+Q1) WAP to retrieve and display all the employees working in a given department
+entered by the user at run from an existing table employee in a database sample
+"""
+
+import mysql.connector as sql
+
+
+connection = sql.connect(host="127.0.0.1", user="root", database="emp", password="Sujal@5243")
+c = connection.cursor()
+
+c.execute(f"SELECT * FROM employee WHERE deptno={input('Enter Department Number: ')}")
+data = [e[1] for e in c.fetchall()]
+print("\n".join(data if data else ["No record found"]))
+
+"""
+# OUTPUT
+
+Enter Department Number: 20
+Smith
+Jones
+Scott
+Adams
+Ford
+
+Enter Department Number: 1
+No record found
+
+"""
+
+```
 ## <br>Q2) WAP to create a table game (game no, name , nop) and insert rows in it<br>using  user defined functions create_table() and insert_rows()<br>
 ```python
 """
@@ -294,39 +327,6 @@ Continue deleting? (y/n): n
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 """
-```
-## <br>Q1) WAP to retrieve and display all the employees working in a given department<br>entered by the user at run from an existing table employee in a database sample<br>
-```python
-"""
-Q1) WAP to retrieve and display all the employees working in a given department
-entered by the user at run from an existing table employee in a database sample
-"""
-
-import mysql.connector as sql
-
-
-connection = sql.connect(host="127.0.0.1", user="root", database="emp", password="Sujal@5243")
-c = connection.cursor()
-
-c.execute(f"SELECT * FROM employee WHERE deptno={input('Enter Department Number: ')}")
-data = [e[1] for e in c.fetchall()]
-print("\n".join(data if data else ["No record found"]))
-
-"""
-# OUTPUT
-
-Enter Department Number: 20
-Smith
-Jones
-Scott
-Adams
-Ford
-
-Enter Department Number: 1
-No record found
-
-"""
-
 ```
 
 

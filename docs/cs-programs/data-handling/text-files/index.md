@@ -5,68 +5,18 @@ All school related resources stored here.
 
 ### RESOURCE LIST
 
-##  8)WAF to display the size of a file after removing EOL characters, leading and trailing spaces and blank lines.
+##  1)WAP to create a text file of story.txt with one line at a time. Display the file.
 ```python
-# 8)WAF to display the size of a file after removing EOL characters, leading and trailing spaces and blank lines.
+# 1)WAP to create a text file of story.txt with one line at a time. Display the file.
 
-
-def count_and_display():
-    file = open("poem.txt")
-    output = []
-    for line in file.readlines():
-        output.append(line.strip().replace('\n', ''))
-    print(len("".join(output)), "Bytes")
+def create_file():
+    file = open("story.txt", "w")
+    while input("Enter values (y/n): ").lower() == "y":
+        file.write(input("Enter text: ") + "\n")
     file.close()
 
 
-count_and_display()
-
-```
-##  12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
-```python
-# 12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
-
-def count_e():
-    file = open("poem.txt")
-    count = 0
-    for word in file.read().replace("\n", " ").split(" "):
-        if word.endswith("e"):
-            count += 1
-    print(f"{count} words in poem.txt end with e")
-    file.close()
-
-
-count_e()
-
-```
-##  7)WAF to read a text file and display the count of vowels and consonants in the file ‘poem.txt’.
-```python
-# 7)WAF to read a text file and display the count of vowels and consonants in the file ‘poem.txt’.
-
-def grammar():
-    file = open("poem.txt")
-    data = file.read().replace("\n", "").replace(" ", "")
-    l = ["v" if char.lower() in "aeiou" else "c" for char in data]
-    vowel_count, const_count = l.count("v"), l.count("c")
-    print(f"Vowel Count = {vowel_count} and Consonant Count = {const_count}")
-    file.close()
-
-
-grammar()
-
-```
-##  5)WAF to display the number of characters of file ‘first.txt’ without counting EOL characters.
-```python
-# 5)WAF to display the number of characters of file ‘first.txt’ without counting EOL characters.
-
-def count_char():
-    file = open("first.txt")
-    char_count = len(file.read().replace("\n", ""))
-    print(f"There are {char_count} characters in the file first.txt")
-    file.close()
-
-
-count_char()
+create_file()
 
 ```
 ##  2)Write a menu driven program to create a file using writelines() and display the text file using readline() depending on the choice of user.
@@ -105,22 +55,6 @@ def menu():
 menu()
 
 ```
-##  6)WAF to count and display number of words in each line of text file "first.txt".
-```python
-# 6)WAF to count and display number of words in each line of text file "first.txt".
-
-def count_words():
-    file = open("first.txt")
-    i = 1
-    for line in file.readlines():
-        print(f"{len(line)} words at line no {i}")
-        i += 1
-    file.close()
-
-
-count_words()
-
-```
 ##  3)Write a function to count and display number of words which starts with alphabet a in an existing text file 'story.txt'.
 ```python
 # 3)Write a function to count and display number of words which
@@ -140,20 +74,95 @@ def count_a():
 count_a()
 
 ```
-##  11)WAF to read the text from file ‘poem.txt’ and replace the occurrence of ‘that’ with ‘this’ and store the entire file content after replacement in file ‘ufile.txt’.
+##  4)WAF to display the number of lines in the file ‘story.txt’.
 ```python
-# 11)WAF to read the text from file ‘poem.txt’ and
-# replace the occurrence of ‘that’ with ‘this’ and
-# store the entire file content after replacement in file ‘ufile.txt’.
+# 4)WAF to display the number of lines in the file ‘story.txt’.
 
-def replace_that():
-    file, new_file = open("poem.txt"), open("ufile.txt", "w")
-    new_file.write(file.read().replace("that", "this"))
+
+def count_lines():
+    file = open("story.txt")
+    print(f"There are {len(file.readlines())} lines in the file story.txt")
     file.close()
-    new_file.close()
 
 
-replace_that()
+count_lines()
+
+```
+##  5)WAF to display the number of characters of file ‘first.txt’ without counting EOL characters.
+```python
+# 5)WAF to display the number of characters of file ‘first.txt’ without counting EOL characters.
+
+def count_char():
+    file = open("first.txt")
+    char_count = len(file.read().replace("\n", ""))
+    print(f"There are {char_count} characters in the file first.txt")
+    file.close()
+
+
+count_char()
+
+```
+##  6)WAF to count and display number of words in each line of text file "first.txt".
+```python
+# 6)WAF to count and display number of words in each line of text file "first.txt".
+
+def count_words():
+    file = open("first.txt")
+    i = 1
+    for line in file.readlines():
+        print(f"{len(line)} words at line no {i}")
+        i += 1
+    file.close()
+
+
+count_words()
+
+```
+##  7)WAF to read a text file and display the count of vowels and consonants in the file ‘poem.txt’.
+```python
+# 7)WAF to read a text file and display the count of vowels and consonants in the file ‘poem.txt’.
+
+def grammar():
+    file = open("poem.txt")
+    data = file.read().replace("\n", "").replace(" ", "")
+    l = ["v" if char.lower() in "aeiou" else "c" for char in data]
+    vowel_count, const_count = l.count("v"), l.count("c")
+    print(f"Vowel Count = {vowel_count} and Consonant Count = {const_count}")
+    file.close()
+
+
+grammar()
+
+```
+##  8)WAF to display the size of a file after removing EOL characters, leading and trailing spaces and blank lines.
+```python
+# 8)WAF to display the size of a file after removing EOL characters, leading and trailing spaces and blank lines.
+
+
+def count_and_display():
+    file = open("poem.txt")
+    output = []
+    for line in file.readlines():
+        output.append(line.strip().replace('\n', ''))
+    print(len("".join(output)), "Bytes")
+    file.close()
+
+
+count_and_display()
+
+```
+##  9)WAF to reverse and display each line of text from a already created text file ‘poem.txt’.
+```python
+# 9)WAF to reverse and display each line of text from a already created text file ‘poem.txt’.
+
+def reverse():
+    file = open("poem.txt")
+    for line in file.readlines():
+        print(line[::-1])
+    file.close()
+
+
+reverse()
 
 ```
 ##  10)WAF to find and display the occurrence of the word ‘we’ in text file ‘poem.txt’.
@@ -170,46 +179,37 @@ def we_count():
 we_count()
 
 ```
-##  4)WAF to display the number of lines in the file ‘story.txt’.
+##  11)WAF to read the text from file ‘poem.txt’ and replace the occurrence of ‘that’ with ‘this’ and store the entire file content after replacement in file ‘ufile.txt’.
 ```python
-# 4)WAF to display the number of lines in the file ‘story.txt’.
+# 11)WAF to read the text from file ‘poem.txt’ and
+# replace the occurrence of ‘that’ with ‘this’ and
+# store the entire file content after replacement in file ‘ufile.txt’.
 
-
-def count_lines():
-    file = open("story.txt")
-    print(f"There are {len(file.readlines())} lines in the file story.txt")
+def replace_that():
+    file, new_file = open("poem.txt"), open("ufile.txt", "w")
+    new_file.write(file.read().replace("that", "this"))
     file.close()
+    new_file.close()
 
 
-count_lines()
+replace_that()
 
 ```
-##  1)WAP to create a text file of story.txt with one line at a time. Display the file.
+##  12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
 ```python
-# 1)WAP to create a text file of story.txt with one line at a time. Display the file.
+# 12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
 
-def create_file():
-    file = open("story.txt", "w")
-    while input("Enter values (y/n): ").lower() == "y":
-        file.write(input("Enter text: ") + "\n")
-    file.close()
-
-
-create_file()
-
-```
-##  9)WAF to reverse and display each line of text from a already created text file ‘poem.txt’.
-```python
-# 9)WAF to reverse and display each line of text from a already created text file ‘poem.txt’.
-
-def reverse():
+def count_e():
     file = open("poem.txt")
-    for line in file.readlines():
-        print(line[::-1])
+    count = 0
+    for word in file.read().replace("\n", " ").split(" "):
+        if word.endswith("e"):
+            count += 1
+    print(f"{count} words in poem.txt end with e")
     file.close()
 
 
-reverse()
+count_e()
 
 ```
 
