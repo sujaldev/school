@@ -217,7 +217,7 @@ count_e()
 
 ---
 
-### [RAISE AN ISSUE](https://sujaldev.github.io/school/) ON GITHUB IF
+### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
 
 - Answer is wrong
 - Need help with a question
