@@ -15,6 +15,7 @@ All school related resources stored here.
 ### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
 
 - Answer is wrong
+- Want a missing question to be added
 - Need help with a question
 - Need help navigating the website
 - Website has a bug
