@@ -148,5 +148,12 @@ menu()
 ```
 
 
-### ENCOUNTERED SOMETHING WRONG?
-Raise an issue on [github](https://github.com/sujaldev/school) to report anything.
+### [RAISE AN ISSUE](https://sujaldev.github.io/school/) ON GITHUB IF
+- Answer is wrong
+- Need help with a question
+- Need help navigating the website
+- Website has a bug
+
+### WANT TO CONTRIBUTE RESOURCES?
+Fork my [repository](https://github.com/sujaldev/school) \
+After adding changes, create a pull request.
