@@ -91,14 +91,14 @@ def menu():
 menu()
 
 ```
-## <br>Q3)[PRACTICAL] Write a menu driven program to do the following:-<br>   a) To create a binary file 'product.dat' in the following format :<br>    {‘name’ : ‘file’, ‘price’ : 112}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.<br>   b) To display the above file<br>   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 100.<br>
+## <br>Q3)[PRACTICAL] Write a menu driven program to do the following:-<br>   a) To create a binary file 'product.dat' in the following format :<br>    {‘name’ : ‘file’, ‘price’ : 113}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.<br>   b) To display the above file<br>   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 101.<br>
 ```python
 """
 Q3)[PRACTICAL] Write a menu driven program to do the following:-
    a) To create a binary file 'product.dat' in the following format :
-    {‘name’ : ‘file’, ‘price’ : 112}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.
+    {‘name’ : ‘file’, ‘price’ : 113}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.
    b) To display the above file
-   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 100.
+   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 101.
 """
 import pickle
 
@@ -221,13 +221,15 @@ def read():
 def update():
     db = read()
     file = open("student.dat", "wb")
-    old_no, new_no = int(input("Enter roll number to look for: ")), int(input("Enter updated value: "))
+    old_no, new_no = int(input("Enter roll no to look for: ")), int(input("Enter new roll no: "))
+    new_name, new_grade = input("Enter updated name: "), input("Enter updated grade: ")
     matched = False
 
     for student in db:
         print("OLD: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         if student[0] == old_no:
             student[0], matched = new_no, True
+            student[1], student[2] = new_name, new_grade
         print("NEW: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         pickle.dump(student, file)
     file.close()
@@ -306,6 +308,7 @@ def delete():
     for student in db:
         print("OLD: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         if student[0] == roll_no:
+            matched = True
             continue
         print("NEW: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         pickle.dump(student, file)
