@@ -1,9 +1,9 @@
 """
 Q3)[PRACTICAL] Write a menu driven program to do the following:-
    a) To create a binary file 'product.dat' in the following format :
-    {‘name’ : ‘file’, ‘price’ : 112}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.
+    {‘name’ : ‘file’, ‘price’ : 113}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.
    b) To display the above file
-   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 100.
+   c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 101.
 """
 import pickle
 

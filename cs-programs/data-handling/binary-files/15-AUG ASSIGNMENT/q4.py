@@ -38,13 +38,15 @@ def read():
 def update():
     db = read()
     file = open("student.dat", "wb")
-    old_no, new_no = int(input("Enter roll number to look for: ")), int(input("Enter updated value: "))
+    old_no, new_no = int(input("Enter roll no to look for: ")), int(input("Enter new roll no: "))
+    new_name, new_grade = input("Enter updated name: "), input("Enter updated grade: ")
     matched = False
 
     for student in db:
         print("OLD: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         if student[0] == old_no:
             student[0], matched = new_no, True
+            student[1], student[2] = new_name, new_grade
         print("NEW: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         pickle.dump(student, file)
     file.close()

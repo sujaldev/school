@@ -44,6 +44,7 @@ def delete():
     for student in db:
         print("OLD: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         if student[0] == roll_no:
+            matched = True
             continue
         print("NEW: ", f"{student[1]} with roll number {student[0]} has grade {student[2]}")
         pickle.dump(student, file)

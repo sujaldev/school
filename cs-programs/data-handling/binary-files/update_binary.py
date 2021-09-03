@@ -2,18 +2,19 @@ import pickle
 
 
 def delete():
-    file = open("student.dat", "rb+")
-    rn = int(input("Enter roll no to delete"))
+    file = open("student.dat", "rb")
+    roll_no = int(input("Enter roll no to delete"))
     buffer = []
     try:
         while True:
-            r = pickle.load(file)
-            if r[0] != rn:
-                buffer.append(r)
+            student = pickle.load(file)
+            current_roll_no = student[0]
+            if current_roll_no != roll_no:
+                buffer.append(student)
             else:
                 print("MATCH FOUND... DELETING...")
     except EOFError:
-        pass
-    file.truncate(0)
+        file.close()
+    file = open("student.dat", "wb")
     for each in buffer:
         pickle.dump(each, file)
