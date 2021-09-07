@@ -54,7 +54,7 @@ def transfer():
 def display_transferred():
     db = read("new.dat")
     for item in db:
-        print(f"cost of 1 {item['name']} is {item['price']}")
+        print(f"{item['name']} : ₹{item['price']}")
 
 
 def menu():

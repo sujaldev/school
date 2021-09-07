@@ -34,3 +34,25 @@ def display():
         if not matched:
             print("NO GRADE A STUDENTS EXIST")
         file.close()
+
+
+def menu():
+    while True:
+        print("\n"
+              "1: Create File",
+              "2: Display Students with grade A",
+              "3: Exit", sep="\n")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            create()
+        elif choice == "2":
+            display()
+        elif choice == "3":
+            print("Exiting...")
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN...")
+
+
+menu()

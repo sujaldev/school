@@ -142,6 +142,28 @@ def display():
             print("NO GRADE A STUDENTS EXIST")
         file.close()
 
+
+def menu():
+    while True:
+        print("\n"
+              "1: Create File",
+              "2: Display Students with grade A",
+              "3: Exit", sep="\n")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            create()
+        elif choice == "2":
+            display()
+        elif choice == "3":
+            print("Exiting...")
+            break
+        else:
+            print("INVALID CHOICE TRY AGAIN...")
+
+
+menu()
+
 ```
 ## <br>2) Write a menu driven program to do the following:-<br>    a) To create a binary file ‘product.dat’ in the following format :<br>       {‘name’ : ‘file’, ‘price’ : 112}, {‘name’ : ‘pen’, ‘price’ : 30}, etc.<br>    b) To display the above file<br>    c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 100.<br>
 ```python
@@ -201,7 +223,7 @@ def transfer():
 def display_transferred():
     db = read("new.dat")
     for item in db:
-        print(f"cost of 1 {item['name']} is {item['price']}")
+        print(f"{item['name']} : ₹{item['price']}")
 
 
 def menu():
