@@ -64,6 +64,26 @@ frequency = input("Enter a string:  ").count(
 print(f"The above character occurs {frequency} times in given string.")
 
 ```
+## <br>WAP to input a string and print in the following format :<br>E.g. if the given string is ‘hello’ then the output should be as follows :<br>hello<br> hell<br>  hel<br>   he<br>    h<br>
+```python
+"""
+WAP to input a string and print in the following format :
+E.g. if the given string is ‘hello’ then the output should be as follows :
+hello
+ hell
+  hel
+   he
+    h
+"""
+string = input("Enter string: ")
+length = len(string)
+
+for i in range(length):
+    space = " " * i
+    letters = string[:length - i]
+    print(space + letters)
+
+```
 
 
 ---

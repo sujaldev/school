@@ -6,6 +6,101 @@ All school related resources stored here.
 
 ### RESOURCE LIST
 
+## <br>WAP to read a list of numbers. Rearrange the list in such a way that the values of alternate<br>locations of the list are exchanged.<br>    Example: If the list initially contains<br>        2, 5, 9, 14, 17, 8, 19, 16<br>    Then after rearrangement the list should contain<br>        5, 2, 14, 9, 8, 17, 16, 19<br>
+```python
+"""
+WAP to read a list of numbers. Rearrange the list in such a way that the values of alternate
+locations of the list are exchanged.
+    Example: If the list initially contains
+        2, 5, 9, 14, 17, 8, 19, 16
+    Then after rearrangement the list should contain
+        5, 2, 14, 9, 8, 17, 16, 19
+"""
+
+l = eval(input("Enter a list: "))
+length = len(l) if (len(l) % 2 == 0) else len(l) - 2
+
+for i in range(0, length, 2):
+    l[i], l[i + 1] = l[i + 1], l[i]
+print(l)
+
+```
+## <br>WAP to read a list of numbers. Replace every element of the list with its reverse.<br>    For example: If the list is having 5 elements.<br>        25 124 7 19 92<br>    Then the program should rearrange the list contents as :<br>        52 421 7 91 29<br>
+```python
+"""
+WAP to read a list of numbers. Replace every element of the list with its reverse.
+    For example: If the list is having 5 elements.
+        25 124 7 19 92
+    Then the program should rearrange the list contents as :
+        52 421 7 91 29
+"""
+l = eval(input("Enter a List: "))
+print(", ".join([str(e)[::-1] for e in l]))
+
+```
+## <br>WAP to read two list of numbers, create third list which contains all elements from given<br>two list alternatively.<br>
+```python
+"""
+WAP to read two list of numbers, create third list which contains all elements from given
+two list alternatively.
+"""
+
+l1 = eval(input("Enter first list: "))
+l2 = eval(input("Enter second list: "))
+merged = []
+
+for i in range(len(max(l1, l2))):
+    if i < len(l1):
+        merged.append(l1[i])
+    if i < len(l2):
+        merged.append(l2[i])
+
+print(merged)
+
+```
+## <br>WAP to arrange a given list of numbers in ascending order using bubble sort.<br>
+```python
+"""
+WAP to arrange a given list of numbers in ascending order using bubble sort.
+"""
+l = eval(input('Enter a list: '))
+length = len(l) - 1
+for i in range(length):
+    for j in range(length - i):
+        if l[j] > l[j + 1]:
+            l[j], l[j + 1] = l[j + 1], l[j]
+
+print('Sorted list: ', l)
+
+```
+## <br>WAP to remove all the odd numbers from a given list.<br>
+```python
+"""
+WAP to remove all the odd numbers from a given list.
+"""
+l = eval(input("Enter a list: "))
+even_list = [e for e in l if e % 2 == 0]
+print(even_list)
+
+```
+## <br>WAP to input a list of numbers arrange the given list in ascending order using insertion sort.<br>
+```python
+"""
+WAP to input a list of numbers arrange the given list in ascending order using insertion sort.
+"""
+l = eval(input("enter a list of numbers :"))
+length = len(l)
+for i in range(1, length):
+    temp = l[i]
+    j = i - 1
+    while l[j] > temp and j >= 0:
+        l[j + 1] = l[j]
+        j -= 1
+    l[j + 1] = temp
+
+print("Sorted list: ", l)
+
+```
 
 
 ---
