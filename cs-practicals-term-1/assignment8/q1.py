@@ -8,7 +8,7 @@ import csv
 
 
 def create():
-    book = open("book.csv", "w")
+    book = open("book.csv", "w", newline="")
     writer = csv.writer(book)
     while input("Enter a record (y/n): ").lower() == "y":
         writer.writerow([
@@ -21,7 +21,7 @@ def create():
 
 
 def display():
-    book = open("book.csv")
+    book = open("book.csv", newline="")
     rows = csv.reader(book)
     print(f"| {'BOOK NUMBER' :^20} | {'BOOK NAME' :^20} | {'AUTHOR NAME' :^20} | {'COST' :^20} |")
     for row in rows:
@@ -30,7 +30,7 @@ def display():
 
 
 def read():
-    book = open("book.csv")
+    book = open("book.csv", newline="")
     rows = [r for r in csv.reader(book)]
     book.close()
     return rows
@@ -38,7 +38,7 @@ def read():
 
 def update():
     rows, match = read(), False
-    book, search_no = open("book.csv", "w"), input("Enter search book no: ")
+    book, search_no = open("book.csv", "w", newline=""), input("Enter search book no: ")
     writer = csv.writer(book)
     for row in rows:
         current_book_no = row[0]
@@ -80,3 +80,69 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 1
+Enter a record (y/n): y
+Enter book no: 1
+Enter book name: book1
+Enter author name: author2
+Enter cost: 100
+Enter a record (y/n): y
+Enter book no: 2
+Enter book name: book2
+Enter author name: author2
+Enter cost: 200
+Enter a record (y/n): n
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 2
+|     BOOK NUMBER      |      BOOK NAME       |     AUTHOR NAME      |         COST         |
+|          1           |        book1         |       author2        |         100          |
+|          2           |        book2         |       author2        |         200          |
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 3
+Enter search book no: 5
+No match was found!
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 3
+Enter search book no: 2
+Record Found, Update now
+Enter book no: 3
+Enter book name: book3
+Enter author name: author3
+Enter cost: 300
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 2
+|     BOOK NUMBER      |      BOOK NAME       |     AUTHOR NAME      |         COST         |
+|          1           |        book1         |       author2        |         100          |
+|          3           |        book3         |       author3        |         300          |
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 7
+Invalid choice, try again...
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 4
+Exiting...
+"""

@@ -20,6 +20,53 @@ def create_file():
 create_file()
 
 ```
+##  10)WAF to find and display the occurrence of the word ‘we’ in text file ‘poem.txt’.
+```python
+# 10)WAF to find and display the occurrence of the word ‘we’ in text file ‘poem.txt’.
+
+def we_count():
+    file = open("poem.txt")
+    count = file.read().replace("\n", " ").split(" ").count("we")
+    print(f"There are {count} occurrences of the word we in poem.txt")
+    file.close()
+
+
+we_count()
+
+```
+##  11)WAF to read the text from file ‘poem.txt’ and replace the occurrence of ‘that’ with ‘this’ and store the entire file content after replacement in file ‘ufile.txt’.
+```python
+# 11)WAF to read the text from file ‘poem.txt’ and
+# replace the occurrence of ‘that’ with ‘this’ and
+# store the entire file content after replacement in file ‘ufile.txt’.
+
+def replace_that():
+    file, new_file = open("poem.txt"), open("ufile.txt", "w")
+    new_file.write(file.read().replace("that", "this"))
+    file.close()
+    new_file.close()
+
+
+replace_that()
+
+```
+##  12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
+```python
+# 12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
+
+def count_e():
+    file = open("poem.txt")
+    count = 0
+    for word in file.read().replace("\n", " ").split(" "):
+        if word.endswith("e"):
+            count += 1
+    print(f"{count} words in poem.txt end with e")
+    file.close()
+
+
+count_e()
+
+```
 ##  2)Write a menu driven program to create a file using writelines() and display the text file using readline() depending on the choice of user.
 ```python
 # 2)Write a menu driven program to create a file using writelines() and display the text file using readline()
@@ -164,53 +211,6 @@ def reverse():
 
 
 reverse()
-
-```
-##  10)WAF to find and display the occurrence of the word ‘we’ in text file ‘poem.txt’.
-```python
-# 10)WAF to find and display the occurrence of the word ‘we’ in text file ‘poem.txt’.
-
-def we_count():
-    file = open("poem.txt")
-    count = file.read().replace("\n", " ").split(" ").count("we")
-    print(f"There are {count} occurrences of the word we in poem.txt")
-    file.close()
-
-
-we_count()
-
-```
-##  11)WAF to read the text from file ‘poem.txt’ and replace the occurrence of ‘that’ with ‘this’ and store the entire file content after replacement in file ‘ufile.txt’.
-```python
-# 11)WAF to read the text from file ‘poem.txt’ and
-# replace the occurrence of ‘that’ with ‘this’ and
-# store the entire file content after replacement in file ‘ufile.txt’.
-
-def replace_that():
-    file, new_file = open("poem.txt"), open("ufile.txt", "w")
-    new_file.write(file.read().replace("that", "this"))
-    file.close()
-    new_file.close()
-
-
-replace_that()
-
-```
-##  12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
-```python
-# 12)WAF to count and display the words ending with ‘e’ in a text file ‘poem.txt’.
-
-def count_e():
-    file = open("poem.txt")
-    count = 0
-    for word in file.read().replace("\n", " ").split(" "):
-        if word.endswith("e"):
-            count += 1
-    print(f"{count} words in poem.txt end with e")
-    file.close()
-
-
-count_e()
 
 ```
 

@@ -18,7 +18,7 @@ import csv
 
 
 def create():
-    book = open("book.csv", "w")
+    book = open("book.csv", "w", newline="")
     writer = csv.writer(book)
     while input("Enter a record (y/n): ").lower() == "y":
         writer.writerow([
@@ -31,7 +31,7 @@ def create():
 
 
 def display():
-    book = open("book.csv")
+    book = open("book.csv", newline="")
     rows = csv.reader(book)
     print(f"| {'BOOK NUMBER' :^20} | {'BOOK NAME' :^20} | {'AUTHOR NAME' :^20} | {'COST' :^20} |")
     for row in rows:
@@ -40,7 +40,7 @@ def display():
 
 
 def read():
-    book = open("book.csv")
+    book = open("book.csv", newline="")
     rows = [r for r in csv.reader(book)]
     book.close()
     return rows
@@ -48,7 +48,7 @@ def read():
 
 def update():
     rows, match = read(), False
-    book, search_no = open("book.csv", "w"), input("Enter search book no: ")
+    book, search_no = open("book.csv", "w", newline=""), input("Enter search book no: ")
     writer = csv.writer(book)
     for row in rows:
         current_book_no = row[0]
@@ -91,6 +91,72 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 1
+Enter a record (y/n): y
+Enter book no: 1
+Enter book name: book1
+Enter author name: author2
+Enter cost: 100
+Enter a record (y/n): y
+Enter book no: 2
+Enter book name: book2
+Enter author name: author2
+Enter cost: 200
+Enter a record (y/n): n
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 2
+|     BOOK NUMBER      |      BOOK NAME       |     AUTHOR NAME      |         COST         |
+|          1           |        book1         |       author2        |         100          |
+|          2           |        book2         |       author2        |         200          |
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 3
+Enter search book no: 5
+No match was found!
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 3
+Enter search book no: 2
+Record Found, Update now
+Enter book no: 3
+Enter book name: book3
+Enter author name: author3
+Enter cost: 300
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 2
+|     BOOK NUMBER      |      BOOK NAME       |     AUTHOR NAME      |         COST         |
+|          1           |        book1         |       author2        |         100          |
+|          3           |        book3         |       author3        |         300          |
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 7
+Invalid choice, try again...
+1. Create File
+2. Display
+3. Update
+4. Exit
+Enter choice: 4
+Exiting...
+"""
+
 ```
 ## <br>Write a menu driven program to do the following :<br>    a) Create a csv file 'item.csv' containing item record as item_no, item_name, cost and quantity.<br>    b) Display the file.<br>    c) Delete an item where the item number is given by the user.<br>
 ```python
@@ -104,7 +170,7 @@ import csv
 
 
 def create():
-    item_file = open("item.csv", "w")
+    item_file = open("item.csv", "w", newline="")
     writer = csv.writer(item_file)
     while input("Enter a record (y/n): ").lower() == "y":
         writer.writerow([
@@ -117,7 +183,7 @@ def create():
 
 
 def display():
-    item_file = open("book.csv")
+    item_file = open("item.csv", newline="")
     rows = csv.reader(item_file)
     print(f"| {'ITEM NUMBER' :^20} | {'ITEM NAME' :^20} | {'ITEM COST' :^20} | {'ITEM QUANTITY' :^20} |")
     for row in rows:
@@ -126,7 +192,7 @@ def display():
 
 
 def read():
-    item_file = open("book.csv")
+    item_file = open("item.csv", newline="")
     rows = [r for r in csv.reader(item_file)]
     item_file.close()
     return rows
@@ -134,7 +200,7 @@ def read():
 
 def delete():
     rows, match = read(), False
-    item_file, search_no = open("book.csv", "w"), input("Enter search item no: ")
+    item_file, search_no = open("item.csv", "w", newline=""), input("Enter search item no: ")
     writer = csv.writer(item_file)
     for row in rows:
         current_item_no = row[0]
@@ -152,7 +218,7 @@ def menu():
     while True:
         print("1. Create File",
               "2. Display",
-              "3. Delete"
+              "3. Delete",
               "4. Exit", sep="\n")
         choice = input("Enter choice: ")
 
@@ -171,6 +237,61 @@ def menu():
 
 menu()
 
+
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 1
+Enter a record (y/n): y
+Enter item no: 1
+Enter item name: pen
+Enter cost: 10
+Enter quantity: 100
+Enter a record (y/n): y
+Enter item no: 2
+Enter item name: pencil
+Enter cost: 5
+Enter quantity: 2000
+Enter a record (y/n): n
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 2
+|     ITEM NUMBER      |      ITEM NAME       |      ITEM COST       |    ITEM QUANTITY     |
+|          1           |         pen          |          10          |         100          |
+|          2           |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 3
+Enter search item no: 2938
+No match was found!
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 3
+Enter search item no: 1
+Record Found and deleted
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 2
+|     ITEM NUMBER      |      ITEM NAME       |      ITEM COST       |    ITEM QUANTITY     |
+|          2           |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 4
+Exiting...
+"""
 ```
 ## <br>WAF to search and display the record of that product from the file ‘product.csv’ which has<br>maximum cost.<br>Sample of ‘product.csv’ is shown below :<br>PID, PNAME, COST, QUANTITY<br>P1, BRUSH, 50, 200<br>P2, TOOTHPASTE, 120, 150<br>P3, COMB, 40, 300<br>P4, SHEETS, 100, 500<br>
 ```python
@@ -188,7 +309,7 @@ import csv
 
 
 def create():
-    product_file = open("product.csv", "w")
+    product_file = open("product.csv", "w", newline="")
     writer = csv.writer(product_file)
     writer.writerow(["PID", "PNAME", "COST", "QUANTITY"])
     while input("Enter values (y/n): ").lower() == "y":
@@ -202,7 +323,7 @@ def create():
 
 
 def read():
-    product_file = open("product.csv")
+    product_file = open("product.csv", newline="")
     rows = [r for r in csv.reader(product_file)]
     product_file.close()
     return rows
@@ -249,6 +370,47 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 1
+Enter values (y/n): y
+Enter product id: p1
+Enter product name: pen
+Enter product cost: 10
+Enter product quantity: 100
+Enter values (y/n): y
+Enter product id: p2
+Enter product name: pencil
+Enter product cost: 5
+Enter product quantity: 2000
+Enter values (y/n): n
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 2
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p1          |         pen          |          10          |         100          |
+|          p2          |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 3
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p1          |         pen          |          10          |         100          |
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 4
+Exiting...
+"""
+
 ```
 ## <br>WAF to transfer only those records from the file product.csv to another file ‘pro1.csv’ whose<br>quantity is more than 150. Also include the first row with headings sample of product.csv is<br>shown below :<br>PID, PNAME, COST, QUANTITY<br>P1, BRUSH, 50, 200<br>P2, TOOTHPASTE, 120, 150<br>P3, COMB, 40, 300<br>P4, SHEETS, 100, 500<br>
 ```python
@@ -265,8 +427,8 @@ P4, SHEETS, 100, 500
 import csv
 
 
-def read():
-    product_file = open("pro1.csv")
+def read(file_name="product"):
+    product_file = open(f"{file_name}.csv", newline="")
     rows = [r for r in csv.reader(product_file)]
     product_file.close()
     return rows
@@ -274,7 +436,7 @@ def read():
 
 def transfer():
     rows = read()[1:]  # [1:] to skip header
-    pro1 = open("pro1.csv", "w")
+    pro1 = open("pro1.csv", "w", newline="")
     writer = csv.writer(pro1)
     writer.writerow(["PID", "PNAME", "COST", "QUANTITY"])
     writer.writerows([r for r in rows if int(r[2]) > 150])
@@ -283,7 +445,7 @@ def transfer():
 
 
 def display():
-    rows = read()
+    rows = read("pro1")
     for row in rows:
         print("| {:^20} | {:^20} | {:^20} | {:^20} |".format(*row))
 
@@ -308,6 +470,26 @@ def menu():
 
 menu()
 
+
+"""
+OUTPUT:
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 1
+Transferred successfully
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 2
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p3          |     geometry box     |         500          |          20          |
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 3
+Exiting...
+"""
 ```
 
 

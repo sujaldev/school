@@ -6,8 +6,8 @@ All school related resources stored here.
 
 ### RESOURCE LIST
 
-- [CS PROGRAMS](./cs-programs)
 - [CS PRACTICALS TERM 1](./cs-practicals-term-1)
+- [CS PROGRAMS](./cs-programs)
 
 
 ---

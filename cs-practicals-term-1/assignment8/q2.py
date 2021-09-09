@@ -8,7 +8,7 @@ import csv
 
 
 def create():
-    item_file = open("item.csv", "w")
+    item_file = open("item.csv", "w", newline="")
     writer = csv.writer(item_file)
     while input("Enter a record (y/n): ").lower() == "y":
         writer.writerow([
@@ -21,7 +21,7 @@ def create():
 
 
 def display():
-    item_file = open("book.csv")
+    item_file = open("item.csv", newline="")
     rows = csv.reader(item_file)
     print(f"| {'ITEM NUMBER' :^20} | {'ITEM NAME' :^20} | {'ITEM COST' :^20} | {'ITEM QUANTITY' :^20} |")
     for row in rows:
@@ -30,7 +30,7 @@ def display():
 
 
 def read():
-    item_file = open("book.csv")
+    item_file = open("item.csv", newline="")
     rows = [r for r in csv.reader(item_file)]
     item_file.close()
     return rows
@@ -38,7 +38,7 @@ def read():
 
 def delete():
     rows, match = read(), False
-    item_file, search_no = open("book.csv", "w"), input("Enter search item no: ")
+    item_file, search_no = open("item.csv", "w", newline=""), input("Enter search item no: ")
     writer = csv.writer(item_file)
     for row in rows:
         current_item_no = row[0]
@@ -56,7 +56,7 @@ def menu():
     while True:
         print("1. Create File",
               "2. Display",
-              "3. Delete"
+              "3. Delete",
               "4. Exit", sep="\n")
         choice = input("Enter choice: ")
 
@@ -74,3 +74,59 @@ def menu():
 
 
 menu()
+
+
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 1
+Enter a record (y/n): y
+Enter item no: 1
+Enter item name: pen
+Enter cost: 10
+Enter quantity: 100
+Enter a record (y/n): y
+Enter item no: 2
+Enter item name: pencil
+Enter cost: 5
+Enter quantity: 2000
+Enter a record (y/n): n
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 2
+|     ITEM NUMBER      |      ITEM NAME       |      ITEM COST       |    ITEM QUANTITY     |
+|          1           |         pen          |          10          |         100          |
+|          2           |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 3
+Enter search item no: 2938
+No match was found!
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 3
+Enter search item no: 1
+Record Found and deleted
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 2
+|     ITEM NUMBER      |      ITEM NAME       |      ITEM COST       |    ITEM QUANTITY     |
+|          2           |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Delete
+4. Exit
+Enter choice: 4
+Exiting...
+"""

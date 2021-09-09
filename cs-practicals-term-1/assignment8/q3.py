@@ -12,7 +12,7 @@ import csv
 
 
 def create():
-    product_file = open("product.csv", "w")
+    product_file = open("product.csv", "w", newline="")
     writer = csv.writer(product_file)
     writer.writerow(["PID", "PNAME", "COST", "QUANTITY"])
     while input("Enter values (y/n): ").lower() == "y":
@@ -26,7 +26,7 @@ def create():
 
 
 def read():
-    product_file = open("product.csv")
+    product_file = open("product.csv", newline="")
     rows = [r for r in csv.reader(product_file)]
     product_file.close()
     return rows
@@ -72,3 +72,44 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 1
+Enter values (y/n): y
+Enter product id: p1
+Enter product name: pen
+Enter product cost: 10
+Enter product quantity: 100
+Enter values (y/n): y
+Enter product id: p2
+Enter product name: pencil
+Enter product cost: 5
+Enter product quantity: 2000
+Enter values (y/n): n
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 2
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p1          |         pen          |          10          |         100          |
+|          p2          |        pencil        |          5           |         2000         |
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 3
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p1          |         pen          |          10          |         100          |
+1. Create File
+2. Display
+3. Find maximum
+4. Exit
+Enter choice: 4
+Exiting...
+"""

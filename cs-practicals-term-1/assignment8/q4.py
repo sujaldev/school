@@ -11,8 +11,8 @@ P4, SHEETS, 100, 500
 import csv
 
 
-def read():
-    product_file = open("pro1.csv")
+def read(file_name="product"):
+    product_file = open(f"{file_name}.csv", newline="")
     rows = [r for r in csv.reader(product_file)]
     product_file.close()
     return rows
@@ -20,7 +20,7 @@ def read():
 
 def transfer():
     rows = read()[1:]  # [1:] to skip header
-    pro1 = open("pro1.csv", "w")
+    pro1 = open("pro1.csv", "w", newline="")
     writer = csv.writer(pro1)
     writer.writerow(["PID", "PNAME", "COST", "QUANTITY"])
     writer.writerows([r for r in rows if int(r[2]) > 150])
@@ -29,7 +29,7 @@ def transfer():
 
 
 def display():
-    rows = read()
+    rows = read("pro1")
     for row in rows:
         print("| {:^20} | {:^20} | {:^20} | {:^20} |".format(*row))
 
@@ -53,3 +53,24 @@ def menu():
 
 
 menu()
+
+
+"""
+OUTPUT:
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 1
+Transferred successfully
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 2
+|         PID          |        PNAME         |         COST         |       QUANTITY       |
+|          p3          |     geometry box     |         500          |          20          |
+1. Transfer
+2. Display
+3. Exit
+Enter choice: 3
+Exiting...
+"""
