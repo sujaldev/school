@@ -62,7 +62,7 @@ def menu():
     while True:
         print("1. Create File",
               "2. Display",
-              "3. Update"
+              "3. Update",
               "4. Exit", sep="\n")
         choice = input("Enter choice: ")
 

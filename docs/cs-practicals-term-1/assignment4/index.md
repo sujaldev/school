@@ -82,7 +82,22 @@ Write a Python program to create a dictionary of students where name is the key,
 the value of the dictionary. Create another dictionary from existing one after removing keys
 containing duplicate values from the Dictionary.
 """
-pass
+db = {}
+print("Create student database:")
+while input("Enter record (y/n): ").lower() == "y":
+    name = input("Enter name: ")
+    marks = float(input("Enter marks: "))
+    db[name] = marks
+
+unique_values, unique_dict = [], {}
+for key, val in db.items():
+    if val not in unique_values:
+        unique_values.append(val)
+        unique_dict[key] = val
+
+print("Unique entries:")
+for name, marks in unique_dict.items():
+    print(f"{name}: {marks}")
 
 ```
 ## <br>WAP to create a dictionary of n employees where names are keys and values of each<br>employee is a collection of BASIC(input by the user), DA(20% of Basic), HRA(10% of Basic),<br>TA(10% of Basic). Calculate and display the total salary of each employee.<br>
@@ -92,7 +107,11 @@ WAP to create a dictionary of n employees where names are keys and values of eac
 employee is a collection of BASIC(input by the user), DA(20% of Basic), HRA(10% of Basic),
 TA(10% of Basic). Calculate and display the total salary of each employee.
 """
-pass
+while input("Enter more employees (y/n): ").lower() == "y":
+    basic = int(input("Enter basic: "))
+    da = 0.2 * basic
+    hra = ta = 0.1 * basic
+    print("Total salary:", basic + da + hra + ta)
 
 ```
 
