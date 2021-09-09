@@ -19,3 +19,21 @@ for key, val in db.items():
 print("Unique entries:")
 for name, marks in unique_dict.items():
     print(f"{name}: {marks}")
+
+"""
+OUTPUT:
+Create student database:
+Enter record (y/n): y
+Enter name: feynman
+Enter marks: 99
+Enter record (y/n): y
+Enter name: turing
+Enter marks: 99
+Enter record (y/n): y
+Enter name: neumann
+Enter marks: 85
+Enter record (y/n): n
+Unique entries:
+feynman: 99.0
+neumann: 85.0
+"""

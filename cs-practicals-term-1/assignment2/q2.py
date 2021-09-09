@@ -7,3 +7,8 @@ WAP to read a list of numbers. Replace every element of the list with its revers
 """
 l = eval(input("Enter a List: "))
 print(", ".join([str(e)[::-1] for e in l]))
+
+"""
+OUTPUT:
+
+"""

@@ -44,3 +44,32 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 1
+Enter lines (y/n): y
+Enter line: this is appended line 1
+Enter lines (y/n): y
+Enter line: this is appended line 2
+Enter lines (y/n): n
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 2
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+this is appended line 1
+this is appended line 2
+
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 3
+Exiting...
+"""

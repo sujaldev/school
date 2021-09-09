@@ -91,3 +91,64 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 1
+Add values (y/n): y
+Enter roll no: 1
+Enter student name: feynman
+Enter student's marks: 99
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 2
+Enter student name: turing
+Enter student's marks: 95
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 3
+Enter student name: neumann
+Enter student's marks: 80
+Enter student's grade: B
+Add values (y/n): n
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 3
+FILE BEFORE UPDATING:
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+Enter roll to look for: 2
+MATCH FOUND, UPDATE NOW:
+Enter new roll no: 4
+Enter student new name: alan
+Enter student's new marks: 90
+Enter student's new grade: A
+FILE AFTER UPDATING
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 4 | Student Name: alan | Marks: 90 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 4
+Exiting...
+"""

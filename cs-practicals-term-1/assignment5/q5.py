@@ -19,3 +19,9 @@ def isort(l):
 
 unsorted = eval(input("Enter a list: "))
 print("Sorted list: ", isort(unsorted))
+
+"""
+OUTPUT:
+Enter a list: [5, 4, 3, 2, 1]
+Sorted list:  [1, 2, 3, 4, 5]
+"""

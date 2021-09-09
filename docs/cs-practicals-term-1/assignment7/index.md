@@ -67,6 +67,43 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 1
+Add values (y/n): y
+Enter roll no: 1
+Enter student name: feynman
+Enter student's marks: 99
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 2
+Enter student name: turing
+Enter student's marks: 95
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 3
+Enter student name: neumann
+Enter student's marks: 80
+Enter student's grade: B
+Add values (y/n): n
+
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 3
+Exiting...
+"""
+
 ```
 ## <br>Write a menu driven program to do the following:-<br>    a) To create a binary file 'product.dat' in the following format : {‘name’ : ‘file’, ‘price’ : 112},<br>       {‘name’ : ‘pen’, ‘price’ : 30}, etc.<br>    b) To display the above file<br>    c) Transfer all the records from binary file ‘product.dat’ to ‘new.dat’ whose price is less than 100.<br>
 ```python
@@ -120,6 +157,7 @@ def transfer():
         if item["price"] < 100:
             pickle.dump(item, new_file)
     new_file.close()
+    print("Transferred successfully")
 
 
 def display_transferred():
@@ -154,6 +192,63 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 1
+Enter values (y/n): y
+
+Enter product name: pen
+Enter price: 10
+Enter values (y/n): y
+
+Enter product name: pencil
+Enter price: 5
+Enter values (y/n): y
+
+Enter product name: geometry box
+Enter price: 150
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 2
+pen : ₹10.0
+pencil : ₹5.0
+geometry box : ₹150.0
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 3
+Transferred successfully
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 4
+pen : ₹10.0
+pencil : ₹5.0
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 5
+Exiting...
+"""
 
 ```
 ## <br>Write a menu driven program to do the following:-<br>    a) To create a binary file ‘student.dat’ containing fields as rno, name, marks and grade in a list.<br>    b) Function to update a record for a given roll number without using another file.<br>    b) Display the file after and before updating<br>
@@ -252,6 +347,67 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 1
+Add values (y/n): y
+Enter roll no: 1
+Enter student name: feynman
+Enter student's marks: 99
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 2
+Enter student name: turing
+Enter student's marks: 95
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 3
+Enter student name: neumann
+Enter student's marks: 80
+Enter student's grade: B
+Add values (y/n): n
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 3
+FILE BEFORE UPDATING:
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+Enter roll to look for: 2
+MATCH FOUND, UPDATE NOW:
+Enter new roll no: 4
+Enter student new name: alan
+Enter student's new marks: 90
+Enter student's new grade: A
+FILE AFTER UPDATING
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 4 | Student Name: alan | Marks: 90 | Grades: A
+Roll No: 3 | Student Name: neumann | Marks: 80 | Grades: B
+
+1: Create File
+2: Display File
+3: Update and Display
+4: Exit
+Enter your choice: 4
+Exiting...
+"""
+
 ```
 ## <br>Write a menu driven program to do the following:-<br>   a) To create a binary file ‘student.dat’ containing fields as rno, name, marks and grade in a list.<br>   b) Function to delete a record for a given roll number.<br>   b) Display the file after and before updating<br>
 ```python
@@ -340,6 +496,70 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 1
+Add values (y/n): y
+Enter roll no: 1
+Enter student name: feynman
+Enter student's marks: 99
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 2
+Enter student name: turing
+Enter student's marks: 95
+Enter student's grade: A
+Add values (y/n): n
+
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 3
+FILE BEFORE DELETION:
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+Enter roll no to look for: 2
+DELETED SUCCESSFULLY, NEW FILE:
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 3
+FILE BEFORE DELETION:
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Enter roll no to look for: 899
+NO MATCH WAS FOUND
+
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+
+1: Create File
+2: Display File
+3: Delete Student and Display
+4: Exit
+Enter your choice: 4
+Exiting...
+"""
 
 ```
 ## <br>Write a menu driven program to do the following:-<br>   a) To create a binary file ‘item.dat’ containing fields as<br>      item_id, item_name, price, quantity in the following format:<br>      [[121,pen,20,5],[21,pencil,10,10],…..]<br>   b) To display the above file<br>   c) Add more item details in the existing file.<br>   d) Display the details of an item for a given item_id.<br>
@@ -436,6 +656,86 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 1
+Enter values (y/n): y
+Enter item id: 1
+Enter item name: pen
+Enter item price: 10
+Enter item quantity: 100
+Enter values (y/n): y
+Enter item id: 2
+Enter item name: pencil
+Enter item price: 5
+Enter item quantity: 2000
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 2
+ITEM ID: 1 | ITEM NAME: pen | PRICE: 10.0 | QUANTITY: 100
+ITEM ID: 2 | ITEM NAME: pencil | PRICE: 5.0 | QUANTITY: 2000
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 3
+ENTER NEW ITEMS
+Enter values (y/n): y
+Enter item id: 3
+Enter item name: geometry box
+Enter item price: 200
+Enter item quantity: 20
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 2
+ITEM ID: 1 | ITEM NAME: pen | PRICE: 10.0 | QUANTITY: 100
+ITEM ID: 2 | ITEM NAME: pencil | PRICE: 5.0 | QUANTITY: 2000
+ITEM ID: 3 | ITEM NAME: geometry box | PRICE: 200.0 | QUANTITY: 20
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 4
+Enter search item id: 3
+ITEM ID: 3 | ITEM NAME: geometry box | PRICE: 200.0 | QUANTITY: 20
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 4
+Enter search item id: 98
+NO MATCH FOUND
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 5
+Exiting...
+"""
 
 ```
 

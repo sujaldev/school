@@ -11,3 +11,10 @@ for i in range(1, len(char_list), 2):
 
 print("Alternate Case: ")
 print("".join(char_list))
+
+"""
+OUTPUT:
+Enter a string: computer science
+Alternate Case: 
+cOmPuTeR ScIeNcE
+"""

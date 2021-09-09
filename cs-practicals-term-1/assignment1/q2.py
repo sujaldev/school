@@ -11,3 +11,9 @@ for letter in string:
         lower_count += 1
 
 print(f"The given string has {upper_count} uppercase vowels and {lower_count} lowercase vowels.")
+
+"""
+OUTPUT:
+Enter a string: hEllo thIs is a string
+The given string has 2 uppercase vowels and 4 lowercase vowels.
+"""

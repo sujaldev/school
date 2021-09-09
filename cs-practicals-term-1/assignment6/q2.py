@@ -45,3 +45,29 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 1
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 2
+2 lines end with 'a' or 'A':
+this is a line that ends with an A
+on the other hand this ends with an a
+
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 3
+Exiting...
+"""

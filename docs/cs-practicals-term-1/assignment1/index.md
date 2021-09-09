@@ -41,6 +41,11 @@ for letter in string:
 
 print(f"The given string has {upper_count} uppercase vowels and {lower_count} lowercase vowels.")
 
+"""
+OUTPUT:
+Enter a string: hEllo thIs is a string
+The given string has 2 uppercase vowels and 4 lowercase vowels.
+"""
 ```
 ## <br>WAP to input a string, capitalize every alternate character in a string<br>E.g: original string : computer science<br> new string after alternate character in upper : cOmPuTeR ScIeNcE<br>
 ```python
@@ -58,6 +63,13 @@ for i in range(1, len(char_list), 2):
 print("Alternate Case: ")
 print("".join(char_list))
 
+"""
+OUTPUT:
+Enter a string: computer science
+Alternate Case: 
+cOmPuTeR ScIeNcE
+"""
+
 ```
 ## <br>WAP to find the frequency of any particular alphabet in a given string<br>
 ```python
@@ -71,6 +83,12 @@ frequency = input("Enter a string:  ").count(
 
 print(f"The above character occurs {frequency} times in given string.")
 
+"""
+OUTPUT:
+Enter a string:  hello this is a string
+Enter a character to check it's frequency in above string: i
+The above character occurs 3 times in given string.
+"""
 ```
 ## <br>WAP to input a string and print in the following format<br>E.g. if the given string is ‘hello’ then the output should be as follows:<br>hello<br> hell<br>  hel<br>   he<br>    h<br>
 ```python
@@ -90,6 +108,16 @@ for i in range(length):
     space = " " * i
     letters = string[:length - i]
     print(space + letters)
+
+"""
+OUTPUT:
+Enter string: hello
+hello
+ hell
+  hel
+   he
+    h
+"""
 
 ```
 

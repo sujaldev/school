@@ -13,3 +13,12 @@ length = len(l) if (len(l) % 2 == 0) else len(l) - 2
 for i in range(0, length, 2):
     l[i], l[i + 1] = l[i + 1], l[i]
 print(l)
+
+"""
+OUTPUT:
+Enter a list: [1, 2, 3, 4, 5, 6]
+[2, 1, 4, 3, 6, 5]
+
+Enter a list: [1, 2, 3, 4, 5]
+[2, 1, 4, 3, 5]
+"""

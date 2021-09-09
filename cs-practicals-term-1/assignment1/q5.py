@@ -14,3 +14,13 @@ for i in range(length):
     space = " " * i
     letters = string[:length - i]
     print(space + letters)
+
+"""
+OUTPUT:
+Enter string: hello
+hello
+ hell
+  hel
+   he
+    h
+"""

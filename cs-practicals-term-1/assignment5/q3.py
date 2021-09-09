@@ -11,3 +11,12 @@ def is_palindrome(number):
 
 num = int(input("Enter a number to check if it is a palindrome: "))
 print("Number is a palindrome" if is_palindrome(num) else "Number is not a palindrome")
+
+"""
+OUTPUT:
+Enter a number to check if it is a palindrome: 121
+Number is a palindrome
+
+Enter a number to check if it is a palindrome: 1223
+Number is not a palindrome
+"""

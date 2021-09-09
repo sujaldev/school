@@ -56,3 +56,40 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 1
+Add values (y/n): y
+Enter roll no: 1
+Enter student name: feynman
+Enter student's marks: 99
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 2
+Enter student name: turing
+Enter student's marks: 95
+Enter student's grade: A
+Add values (y/n): y
+Enter roll no: 3
+Enter student name: neumann
+Enter student's marks: 80
+Enter student's grade: B
+Add values (y/n): n
+
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 2
+Roll No: 1 | Student Name: feynman | Marks: 99 | Grades: A
+Roll No: 2 | Student Name: turing | Marks: 95 | Grades: A
+
+1: Create File
+2: Display Students with grade A
+3: Exit
+Enter your choice: 3
+Exiting...
+"""

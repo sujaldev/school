@@ -46,3 +46,36 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 1
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+
+
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 2
+7 words start with 'a' or 'A':
+astronaut
+Amigos!
+a
+an
+A
+an
+a
+
+
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 3
+Exiting...
+"""

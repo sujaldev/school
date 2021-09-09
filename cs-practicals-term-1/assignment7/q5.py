@@ -90,3 +90,83 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 1
+Enter values (y/n): y
+Enter item id: 1
+Enter item name: pen
+Enter item price: 10
+Enter item quantity: 100
+Enter values (y/n): y
+Enter item id: 2
+Enter item name: pencil
+Enter item price: 5
+Enter item quantity: 2000
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 2
+ITEM ID: 1 | ITEM NAME: pen | PRICE: 10.0 | QUANTITY: 100
+ITEM ID: 2 | ITEM NAME: pencil | PRICE: 5.0 | QUANTITY: 2000
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 3
+ENTER NEW ITEMS
+Enter values (y/n): y
+Enter item id: 3
+Enter item name: geometry box
+Enter item price: 200
+Enter item quantity: 20
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 2
+ITEM ID: 1 | ITEM NAME: pen | PRICE: 10.0 | QUANTITY: 100
+ITEM ID: 2 | ITEM NAME: pencil | PRICE: 5.0 | QUANTITY: 2000
+ITEM ID: 3 | ITEM NAME: geometry box | PRICE: 200.0 | QUANTITY: 20
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 4
+Enter search item id: 3
+ITEM ID: 3 | ITEM NAME: geometry box | PRICE: 200.0 | QUANTITY: 20
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 4
+Enter search item id: 98
+NO MATCH FOUND
+
+1: Create File
+2: Display File
+3: Append to file
+4: Search for item
+5: Exit
+Enter your choice: 5
+Exiting...
+"""

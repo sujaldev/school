@@ -19,12 +19,29 @@ while input("Enter records (y/n): ").lower() == "y":
     name, marks = input("Enter student name: "), float(input("Enter student marks: "))
     student_data[name] = marks
 
+print("\nToppers:")
 print("Name".center(20), "Marks".center(20), sep="|")
 print("_" * 42)
 for name, marks in student_data.items():
     if marks >= 90:
         print(name.center(20), str(marks).center(20), sep="|")
         topper_data[name] = marks
+
+"""
+OUTPUT:
+Enter records (y/n): y
+Enter student name: feynman
+Enter student marks: 99
+Enter records (y/n): y
+Enter student name: turing
+Enter student marks: 85
+Enter records (y/n): n
+
+Toppers:
+        Name        |       Marks        
+__________________________________________
+      feynman       |        99.0       
+"""
 
 ```
 ## <br>Write a menu driven Program to Store Name and Phone number in a dictionary, Input Name<br>and search his/her phone number, Input Phone and search its owner name. Traverse the<br>whole dictionary depending on choice of the user.<br>
@@ -74,6 +91,55 @@ while True:
     else:
         print("Invalid choice.")
 
+"""
+OUTPUT:
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 1
+Enter values (y/n): y
+Enter name: feynman
+Enter number: 1234
+Enter values (y/n): y
+Enter name: turing
+Enter number: 4321
+Enter values (y/n): n
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 2
+Enter name to look for: turing
+turing owns the number 4321
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 2
+Enter name to look for: john
+No such person exists in record.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 3
+Enter number to look for: 1234
+The number 1234 belongs to feynman.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 3
+Enter number to look for: 987967
+No such number exists in record.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 4
+exiting...
+"""
 ```
 ## <br>Write a Python program to create a dictionary of students where name is the key, marks is<br>the value of the dictionary. Create another dictionary from existing one after removing keys<br>containing duplicate values from the Dictionary.<br>
 ```python
@@ -99,6 +165,24 @@ print("Unique entries:")
 for name, marks in unique_dict.items():
     print(f"{name}: {marks}")
 
+"""
+OUTPUT:
+Create student database:
+Enter record (y/n): y
+Enter name: feynman
+Enter marks: 99
+Enter record (y/n): y
+Enter name: turing
+Enter marks: 99
+Enter record (y/n): y
+Enter name: neumann
+Enter marks: 85
+Enter record (y/n): n
+Unique entries:
+feynman: 99.0
+neumann: 85.0
+"""
+
 ```
 ## <br>WAP to create a dictionary of n employees where names are keys and values of each<br>employee is a collection of BASIC(input by the user), DA(20% of Basic), HRA(10% of Basic),<br>TA(10% of Basic). Calculate and display the total salary of each employee.<br>
 ```python
@@ -112,6 +196,17 @@ while input("Enter more employees (y/n): ").lower() == "y":
     da = 0.2 * basic
     hra = ta = 0.1 * basic
     print("Total salary:", basic + da + hra + ta)
+
+"""
+OUTPUT:
+Enter more employees (y/n): y
+Enter basic: 200
+Total salary: 280.0
+Enter more employees (y/n): y
+Enter basic: 300
+Total salary: 420.0
+Enter more employees (y/n): n
+"""
 
 ```
 

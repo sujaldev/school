@@ -42,3 +42,53 @@ while True:
 
     else:
         print("Invalid choice.")
+
+"""
+OUTPUT:
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 1
+Enter values (y/n): y
+Enter name: feynman
+Enter number: 1234
+Enter values (y/n): y
+Enter name: turing
+Enter number: 4321
+Enter values (y/n): n
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 2
+Enter name to look for: turing
+turing owns the number 4321
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 2
+Enter name to look for: john
+No such person exists in record.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 3
+Enter number to look for: 1234
+The number 1234 belongs to feynman.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 3
+Enter number to look for: 987967
+No such number exists in record.
+1. Create phonebook
+2. Search phone number by name
+3. Search name by phone number
+4. Exit
+Enter choice: 4
+exiting...
+"""

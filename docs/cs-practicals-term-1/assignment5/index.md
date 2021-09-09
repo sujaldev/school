@@ -32,6 +32,13 @@ n_val = float(input("Enter value for n: "))
 r_val = float(input("Enter value for r: "))
 print("Binomial is: ", binomial(n_val, r_val))
 
+"""
+OUTPUT:
+Enter value for n: 2
+Enter value for r: 2
+Binomial is:  1
+"""
+
 ```
 ## <br>Write a function to return addition, subtraction, multiplication and division of two numbers<br>received as parameter from the calling function display the result.<br>
 ```python
@@ -49,6 +56,16 @@ num1, num2 = float(input("Enter first number: ")), float(input("Enter second num
 for result, operator in do_ops(num1, num2):
     print(f"{num1} {operator} {num2} = {result}")
 
+"""
+OUTPUT:
+Enter first number: 2
+Enter second number: 3
+2.0 + 3.0 = 5.0
+2.0 - 3.0 = -1.0
+2.0 * 3.0 = 6.0
+2.0 / 3.0 = 0.6666666666666666
+"""
+
 ```
 ## <br>Write a function that receives a number as parameter and return one if it is a palindrome<br>number otherwise return zero display the appropriate message.<br>
 ```python
@@ -65,6 +82,15 @@ def is_palindrome(number):
 
 num = int(input("Enter a number to check if it is a palindrome: "))
 print("Number is a palindrome" if is_palindrome(num) else "Number is not a palindrome")
+
+"""
+OUTPUT:
+Enter a number to check if it is a palindrome: 121
+Number is a palindrome
+
+Enter a number to check if it is a palindrome: 1223
+Number is not a palindrome
+"""
 
 ```
 ## <br>Write a program to calculate and display power of base and exponent that is a raise to<br>power b using user defined function. If the exponent is not passed by the user then the<br>square of the given number should be calculated. Implement the above program for both<br>situations.<br>
@@ -87,6 +113,17 @@ def power():
 
 
 power()
+
+"""
+OUTPUT:
+Enter base: 2
+Enter power (or leave emtpy to use default): 2
+4
+
+Enter base: 4
+Enter power (or leave emtpy to use default): 
+16
+"""
 
 ```
 ## <br>Write a function isort() to sort a list of numbers in ascending order using insertion sort<br>where the list is passed as parameter. WAP to input a list of numbers sort the list using<br>function and display the result.<br>
@@ -113,6 +150,11 @@ def isort(l):
 unsorted = eval(input("Enter a list: "))
 print("Sorted list: ", isort(unsorted))
 
+"""
+OUTPUT:
+Enter a list: [5, 4, 3, 2, 1]
+Sorted list:  [1, 2, 3, 4, 5]
+"""
 ```
 
 

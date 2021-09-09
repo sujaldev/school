@@ -21,3 +21,10 @@ def binomial(n, r):
 n_val = float(input("Enter value for n: "))
 r_val = float(input("Enter value for r: "))
 print("Binomial is: ", binomial(n_val, r_val))
+
+"""
+OUTPUT:
+Enter value for n: 2
+Enter value for r: 2
+Binomial is:  1
+"""

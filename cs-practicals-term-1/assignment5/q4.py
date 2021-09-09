@@ -16,3 +16,14 @@ def power():
 
 
 power()
+
+"""
+OUTPUT:
+Enter base: 2
+Enter power (or leave emtpy to use default): 2
+4
+
+Enter base: 4
+Enter power (or leave emtpy to use default): 
+16
+"""

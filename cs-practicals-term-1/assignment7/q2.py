@@ -48,6 +48,7 @@ def transfer():
         if item["price"] < 100:
             pickle.dump(item, new_file)
     new_file.close()
+    print("Transferred successfully")
 
 
 def display_transferred():
@@ -82,3 +83,60 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 1
+Enter values (y/n): y
+
+Enter product name: pen
+Enter price: 10
+Enter values (y/n): y
+
+Enter product name: pencil
+Enter price: 5
+Enter values (y/n): y
+
+Enter product name: geometry box
+Enter price: 150
+Enter values (y/n): n
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 2
+pen : ₹10.0
+pencil : ₹5.0
+geometry box : ₹150.0
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 3
+Transferred successfully
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 4
+pen : ₹10.0
+pencil : ₹5.0
+
+1: Create File
+2: Display File
+3: Transfer Cheap
+4: Display New File
+5: Exit
+Enter your choice: 5
+Exiting...
+"""

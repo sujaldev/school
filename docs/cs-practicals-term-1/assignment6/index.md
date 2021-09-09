@@ -57,6 +57,39 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 1
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+
+
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 2
+7 words start with 'a' or 'A':
+astronaut
+Amigos!
+a
+an
+A
+an
+a
+
+
+1. Display story.txt
+2. Count and display words starting with a or A
+3. Exit
+Enter choice: 3
+Exiting...
+"""
+
 ```
 ## <br>Write a menu driven program to do the following:<br>    a) Display the file 'story.txt'.<br>    b) Count and display all the lines which ends with alphabet 'a' or 'A' use readlines function to<br>    read the content.<br>
 ```python
@@ -108,6 +141,32 @@ def menu():
 
 menu()
 
+"""
+OUTPUT:
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 1
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 2
+2 lines end with 'a' or 'A':
+this is a line that ends with an A
+on the other hand this ends with an a
+
+1. Display story.txt
+2. Count and display lines that end with 'a' or 'A'
+3. Exit
+Enter choice: 3
+Exiting...
+"""
+
 ```
 ## <br>Write a menu driven program to do the following:<br>    a) Add more lines(one at a time) in an existing file 'story.txt'.<br>    b) Display the content of the file using readline function.<br>
 ```python
@@ -157,6 +216,35 @@ def menu():
 
 
 menu()
+
+"""
+OUTPUT:
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 1
+Enter lines (y/n): y
+Enter line: this is appended line 1
+Enter lines (y/n): y
+Enter line: this is appended line 2
+Enter lines (y/n): n
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 2
+Hello astronaut
+Ola Amigos!
+this is a line that ends with an A
+on the other hand this ends with an a
+this is appended line 1
+this is appended line 2
+
+1. Append lines to 'story.txt'
+2. Display 'story.txt' line by line
+3. Exit
+Enter choice: 3
+Exiting...
+"""
 
 ```
 

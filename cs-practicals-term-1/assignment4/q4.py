@@ -8,3 +8,14 @@ while input("Enter more employees (y/n): ").lower() == "y":
     da = 0.2 * basic
     hra = ta = 0.1 * basic
     print("Total salary:", basic + da + hra + ta)
+
+"""
+OUTPUT:
+Enter more employees (y/n): y
+Enter basic: 200
+Total salary: 280.0
+Enter more employees (y/n): y
+Enter basic: 300
+Total salary: 420.0
+Enter more employees (y/n): n
+"""
