@@ -50,6 +50,70 @@ for result, operator in do_ops(num1, num2):
     print(f"{num1} {operator} {num2} = {result}")
 
 ```
+## <br>Write a function that receives a number as parameter and return one if it is a palindrome<br>number otherwise return zero display the appropriate message.<br>
+```python
+"""
+Write a function that receives a number as parameter and return one if it is a palindrome
+number otherwise return zero display the appropriate message.
+"""
+
+
+def is_palindrome(number):
+    number = str(number)
+    return 1 if number == number[::-1] else 0
+
+
+num = int(input("Enter a number to check if it is a palindrome: "))
+print("Number is a palindrome" if is_palindrome(num) else "Number is not a palindrome")
+
+```
+## <br>Write a program to calculate and display power of base and exponent that is a raise to<br>power b using user defined function. If the exponent is not passed by the user then the<br>square of the given number should be calculated. Implement the above program for both<br>situations.<br>
+```python
+"""
+Write a program to calculate and display power of base and exponent that is a raise to
+power b using user defined function. If the exponent is not passed by the user then the
+square of the given number should be calculated. Implement the above program for both
+situations.
+"""
+
+
+def power():
+    b, e = int(input("Enter base: ")), int(input("Enter power (or leave emtpy to use default): ") or 2)
+    result = b
+
+    for i in range(1, e):
+        result *= b
+    print(result)
+
+
+power()
+
+```
+## <br>Write a function isort() to sort a list of numbers in ascending order using insertion sort<br>where the list is passed as parameter. WAP to input a list of numbers sort the list using<br>function and display the result.<br>
+```python
+"""
+Write a function isort() to sort a list of numbers in ascending order using insertion sort
+where the list is passed as parameter. WAP to input a list of numbers sort the list using
+function and display the result.
+"""
+
+
+def isort(l):
+    length = len(l)
+    for i in range(1, length):
+        temp = l[i]
+        j = i - 1
+        while l[j] > temp and j >= 0:
+            l[j + 1] = l[j]
+            j -= 1
+        l[j + 1] = temp
+    return l
+
+
+unsorted = eval(input("Enter a list: "))
+print("Sorted list: ", isort(unsorted))
+
+```
 
 
 ---
