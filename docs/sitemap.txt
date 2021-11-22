@@ -1,0 +1,16 @@
+https://sujaldev.github.io/school/
+https://sujaldev.github.io/school/cs-programs/
+https://sujaldev.github.io/school/cs-practicals-term-1/
+https://sujaldev.github.io/school/TERM-1-BOARD-PRACTICAL/
+https://sujaldev.github.io/school/cs-programs/data-handling/
+https://sujaldev.github.io/school/cs-programs/mysql-connectivity/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment1/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment2/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment3/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment4/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment5/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment6/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment7/
+https://sujaldev.github.io/school/cs-practicals-term-1/assignment8/
+https://sujaldev.github.io/school/cs-programs/data-handling/text-files/
+https://sujaldev.github.io/school/cs-programs/data-handling/binary-files/
