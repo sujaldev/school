@@ -6,10 +6,8 @@ All school related resources stored here.
 
 ### RESOURCE LIST
 
-- [TERM 1 BOARD PRACTICAL](./TERM-1-BOARD-PRACTICAL)
-- [CS PRACTICALS TERM 1](./cs-practicals-term-1)
-- [CS PROGRAMS](./cs-programs)
-- [TERM2](./TERM2)
+- [MYSQL](./MYSQL)
+- [STACK](./STACK)
 
 
 ---
