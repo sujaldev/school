@@ -46,7 +46,7 @@ class Updater:
             if os.path.isdir(f"{self.base_path}/{child}"):
                 sub_dirs.append(child)
                 if child not in self.ignored_dirs:
-                    dir_markdown += f"- [{child.upper().replace('-', ' ')}]" \
+                    dir_markdown += f"> - [{child.upper().replace('-', ' ')}]" \
                                     f"(./{child})\n"
             else:
                 if child not in self.ignored_files:
@@ -57,7 +57,7 @@ class Updater:
                         file_markdown += python_to_markdown(code)
 
         markdown = self.template.replace("%structure%", dir_markdown + file_markdown)
-        return sub_dirs, files,  markdown
+        return sub_dirs, files, markdown
 
     def update_website(self):
         with open(f"{self.doc_path}/index.md", "w") as index_file:

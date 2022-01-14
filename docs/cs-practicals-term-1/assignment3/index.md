@@ -1,8 +1,7 @@
 # SCHOOL RESOURCES ARCHIVE
 
 All school related resources stored here.
-
-#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
+_(maintained by Sujal Singh)_
 
 ### RESOURCE LIST
 
@@ -41,7 +40,7 @@ Fibonacci series till 10:
 
 ---
 
-### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
+#### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
 
 - Answer is wrong
 - Want a missing question to be added
@@ -49,10 +48,13 @@ Fibonacci series till 10:
 - Need help navigating the website
 - Website has a bug
 
-### WANT TO CONTRIBUTE RESOURCES?
+#### WANT TO CONTRIBUTE RESOURCES?
 
-Fork my [repository](https://github.com/sujaldev/school) \
-After adding changes, create a pull request.
+_Fork this [repository](https://github.com/sujaldev/school), make changes, create a pull request._
+
+---
+
+# Comments
 
 <script src="https://giscus.app/client.js"
         data-repo="sujaldev/school"

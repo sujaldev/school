@@ -1,13 +1,12 @@
 # SCHOOL RESOURCES ARCHIVE
 
 All school related resources stored here.
-
-#### THIS WEBSITE IS MAINTAINED BY SUJAL SINGH
+_(maintained by Sujal Singh)_
 
 ### RESOURCE LIST
 
-- [15 AUG ASSIGNMENT](./15-AUG ASSIGNMENT)
-- [3 SEP PRACTICAL FILE](./3-SEP PRACTICAL FILE)
+> - [15 AUG ASSIGNMENT](./15-AUG ASSIGNMENT)
+> - [3 SEP PRACTICAL FILE](./3-SEP PRACTICAL FILE)
 ## <br>Q18) WAP to menu driven program to do the following:-<br>a) Create a binary file 'item.dat' consisting of<br>    item_id, item_name, price, quantity in the following format:<br>    [[121,pen,20,5],[21,pencil,10,10],.....]<br>b) Display the above file<br>c) Add more item details in the existing file<br>d) Display the details of an item for a given item_id<br>
 ```python
 """
@@ -203,7 +202,7 @@ menu()
 
 ---
 
-### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
+#### [RAISE AN ISSUE](https://github.com/sujaldev/school/issues/new/choose) ON GITHUB IF
 
 - Answer is wrong
 - Want a missing question to be added
@@ -211,10 +210,13 @@ menu()
 - Need help navigating the website
 - Website has a bug
 
-### WANT TO CONTRIBUTE RESOURCES?
+#### WANT TO CONTRIBUTE RESOURCES?
 
-Fork my [repository](https://github.com/sujaldev/school) \
-After adding changes, create a pull request.
+_Fork this [repository](https://github.com/sujaldev/school), make changes, create a pull request._
+
+---
+
+# Comments
 
 <script src="https://giscus.app/client.js"
         data-repo="sujaldev/school"
