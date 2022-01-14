@@ -229,3 +229,17 @@ reverse()
 
 Fork my [repository](https://github.com/sujaldev/school) \
 After adding changes, create a pull request.
+
+<script src="https://giscus.app/client.js"
+        data-repo="sujaldev/school"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzODUzMDMzOTI="
+        data-category="Q&A"
+        data-category-id="DIC_kwDOFvdDYM4CArKZ"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
