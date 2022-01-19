@@ -52,3 +52,27 @@ def odd_input():
 odd_input()
 print("Stack: ")
 display()
+
+"""
+OUTPUT:
+Enter numbers (y/n): y
+Enter number: 1
+PUSHED -> 1
+Enter numbers (y/n): y
+Enter number: 2
+Enter numbers (y/n): y
+Enter number: 3
+PUSHED -> 3
+Enter numbers (y/n): y
+Enter number: 4
+Enter numbers (y/n): y
+Enter number: 5
+PUSHED -> 5
+Enter numbers (y/n): n
+Stack: 
+-------STACK START----------
+5 <- top
+3
+1
+-------STACK  END----------
+"""

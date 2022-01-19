@@ -58,3 +58,69 @@ while True:
         break
     else:
         print("Invalid Choice...")
+
+"""
+OUTPUT:
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 1
+Enter Marks: 10
+PUSHED -> 10
+TOP:  0
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 1
+Enter Marks: 20
+PUSHED -> 20
+TOP:  1
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 1
+Enter Marks: 30
+PUSHED -> 30
+TOP:  2
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 3
+-------STACK START----------
+30 <- top
+20
+10
+-------STACK  END----------
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 2
+POPPED <- 30
+TOP:  1
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 3
+-------STACK START----------
+20 <- top
+10
+-------STACK  END----------
+1. Push
+2. Pop
+3. Display
+4. Exit
+
+Your Choice: 4
+"""
