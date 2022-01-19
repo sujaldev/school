@@ -1,5 +1,10 @@
 import os
 import json
+import subprocess
+
+RUNTIME_ERROR_BADGE = F"![status: runtime-error](https://img.shields.io/badge/-runtime%20error-red)"
+NO_INPUT_FILE_BADGE = F"![status: runtime-error](https://img.shields.io/badge/-no%20input%20file-orange)"
+SUCCESS_BADGE = F"![status: runtime-error](https://img.shields.io/badge/-pass-brightgreen)"
 
 
 def python_to_markdown(code):
@@ -18,6 +23,28 @@ def python_to_markdown(code):
         return "## %q%\n```python\n%code%\n```\n".replace("%q%", question).replace("%code%", code)
     else:
         return ""
+
+
+def get_output(base_path, file_name):
+    header_template = "\n### OUTPUT:  {}\n"
+    input_file = file_name[:-3] + ".input"
+    input_file_path = f"{base_path}/{input_file}".replace("//", "/")
+    src_code_file_path = f"{base_path}/{file_name}".replace("//", "/")
+    if not os.path.exists(input_file_path):
+        return header_template.format(NO_INPUT_FILE_BADGE)
+
+    markdown = header_template + "```python\n{}```\n"
+    with open(input_file_path) as input_file:
+        process = subprocess.run(["python", src_code_file_path],
+                                 stdin=input_file,
+                                 stdout=subprocess.PIPE,
+                                 stderr=subprocess.PIPE)
+
+    runtime_error = len(process.stderr) != 0
+    if runtime_error:
+        return markdown.format(RUNTIME_ERROR_BADGE, process.stderr.decode())
+    else:
+        return markdown.format(SUCCESS_BADGE, process.stdout.decode())
 
 
 class Updater:
@@ -55,6 +82,7 @@ class Updater:
                         with open(f"{self.base_path}/{child}", "r") as source:
                             code = source.read()
                         file_markdown += python_to_markdown(code)
+                        # file_markdown += get_output(self.base_path, child)
 
         markdown = self.template.replace("%structure%", dir_markdown + file_markdown)
         return sub_dirs, files, markdown
